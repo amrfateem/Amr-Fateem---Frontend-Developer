@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# SpaceX Capsules Test Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a test project for an assignment that focuses on exploring SpaceX's advanced rockets and spacecraft data. The project includes the following components:
 
-## Available Scripts
+## Components
 
-In the project directory, you can run:
+### App
+The `App` component is the main component that renders other components. It includes the `Banner`, `SearchForm`, `ToastContainer`, and `DataGrid` components.
 
-### `npm start`
+### Banner
+The `Banner` component displays a banner with a background gradient and provides information about SpaceX's capsules. It includes a title and a description.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### SearchForm
+The `SearchForm` component is responsible for rendering a search form with input fields and filters. Users can enter search criteria such as status, serial, and type to retrieve specific results.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### DataGrid
+The `DataGrid` component displays a table of data with pagination. It receives data from the Redux store and uses the `useState` hook to manage the current page and items per page. The component renders a table with columns for serial, status, type, last update, and reuse count. It also includes pagination controls to navigate through the data.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To use this project, follow these steps:
 
-### `npm run build`
+1. Clone the repository.
+2. Install the required dependencies by running `npm install` or `yarn install`.
+3. Start the development server with `npm start` or `yarn start`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project has the following dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `react`: JavaScript library for building user interfaces.
+- `react-dom`: Provides DOM-specific methods for React.
+- `react-redux`: Official React bindings for Redux.
+- `react-toastify`: Library for displaying toast notifications.
+- `lodash`: JavaScript utility library for debouncing function calls.
 
-### `npm run eject`
+Please ensure that you have these dependencies installed before running the project.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The project uses the SpaceX API to fetch data. It sends a POST request to the following endpoint: `https://api.spacexdata.com/v4/capsules/query`. The request body includes the search query parameters such as status, serial, and type.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Video
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+https://github.com/amrfateem/Amr-Fateem-Frontend-Developer/assets/35631863/e6de91aa-a6b4-4fb1-852b-78c703831daf
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
