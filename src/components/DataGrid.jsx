@@ -16,7 +16,7 @@ const DataGrid = () => {
     setCurrentPage(pageNumber);
   };
   return (
-    <div className="bg-white p-4 rounded shadow-md mt-8">
+    <div className="bg-white p-4 rounded shadow-md mt-2 container mx-auto">
       <h1 className="font-bold">Results</h1>
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse table-auto">
@@ -28,13 +28,13 @@ const DataGrid = () => {
               <th className="px-4 py-2 font-bold text-sm uppercase border bg-gray-200">
                 Status
               </th>
-              <th className="px-4 py-2 font-bold text-sm uppercase border bg-gray-200">
+              <th className="px-4 py-2 font-bold text-sm uppercase border bg-gray-200 hidden sm:table-cell">
                 Type
               </th>
-              <th className="px-4 py-2 font-bold text-sm uppercase border bg-gray-200">
+              <th className="px-4 py-2 font-bold text-sm uppercase border bg-gray-200 hidden sm:table-cell">
                 Last Update
               </th>
-              <th className="px-4 py-2 font-bold text-sm uppercase border bg-gray-200">
+              <th className="px-4 py-2 font-bold text-sm uppercase border bg-gray-200 hidden sm:table-cell">
                 Reuse count
               </th>
             </tr>
@@ -44,9 +44,9 @@ const DataGrid = () => {
               <tr key={item.serial} className="bg-white">
                 <td className="px-4 py-2 border">{item.serial}</td>
                 <td className="px-4 py-2 border">{item.status}</td>
-                <td className="px-4 py-2 border">{item.type}</td>
-                <td className="px-4 py-2 border">{item.last_update ? item.last_update : "N/A"}</td>
-                <td className="px-4 py-2 border">{item.reuse_count}</td>
+                <td className="px-4 py-2 border hidden sm:table-cell">{item.type}</td>
+                <td className="px-4 py-2 border hidden sm:table-cell">{item.last_update ? item.last_update : "N/A"}</td>
+                <td className="px-4 py-2 border hidden sm:table-cell">{item.reuse_count}</td>
               </tr>
             ))}
           </tbody>
