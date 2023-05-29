@@ -39,3 +39,10 @@ Please ensure that you have these dependencies installed before running the proj
 ## API
 
 The project uses the SpaceX API to fetch data. It sends a POST request to the following endpoint: `https://api.spacexdata.com/v4/capsules/query`. The request body includes the search query parameters such as status, serial, and type.
+
+## Video
+
+
+https://github.com/amrfateem/Amr-Fateem-Frontend-Developer/assets/35631863/e6de91aa-a6b4-4fb1-852b-78c703831daf
+
+
